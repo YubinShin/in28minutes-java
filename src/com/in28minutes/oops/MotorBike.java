@@ -26,10 +26,15 @@ public class MotorBike {
   }
 
   public void increaseSpeed(int howMuch) {
-    this.speed = this.speed + howMuch;
+    if (howMuch > 0) this.speed = this.speed + howMuch;
+    // setSpeed(this.speed + howMuch); - 이건 안될거 같은데 ㄷ ㄷ
   }
 
   public void decreaseSpeed(int howMuch) {
-    this.speed = this.speed - howMuch;
+    // boolean condition = this.speed - howMuch > 0;
+    // if (howMuch > 0 && condition) this.speed = this.speed - howMuch;
+
+    // 위 코드는 중복이 너무 많네요. 한번만 검증하는 법은 없을까요?
+    setSpeed(this.speed - howMuch);
   }
 }
