@@ -11,4 +11,16 @@ public class Book {
   public void setNumOfCopies(int numOfCopies) {
     this.numOfCopies = numOfCopies;
   }
+
+  public int getNumOfCopies() {
+    return numOfCopies;
+  }
+
+  public void increaseNumOfCopies(int howMuch) {
+    this.numOfCopies = this.numOfCopies + howMuch;
+  }
+
+  public void decreaseNumOfCopies(int howMuch) {
+    this.numOfCopies = this.numOfCopies - howMuch;
+  }
 }

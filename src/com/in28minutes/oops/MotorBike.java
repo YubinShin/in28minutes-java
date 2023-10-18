@@ -24,4 +24,12 @@ public class MotorBike {
     // 캡슐화 LEVE1 : Setter 를 쓰면 원하지 않는 방식으로 변수가 조작되는 것을 방지 할 수 있습니다.
     if (speed > 0) this.speed = speed;
   }
+
+  public void increaseSpeed(int howMuch) {
+    this.speed = this.speed + howMuch;
+  }
+
+  public void decreaseSpeed(int howMuch) {
+    this.speed = this.speed - howMuch;
+  }
 }

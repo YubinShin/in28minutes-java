@@ -17,7 +17,11 @@ public class MotorBikeRunner {
     // ducati.speed = 20;
     // honda.speed = 0;
 
-    ducati.setSpeed(10);
+    ducati.setSpeed(100);
+    ducati.increaseSpeed(200);
+    honda.increaseSpeed(100);
+
     System.out.println(ducati.getSpeed());
+    System.out.println(honda.getSpeed());
   }
 }
