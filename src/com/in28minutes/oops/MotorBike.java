@@ -8,6 +8,14 @@ public class MotorBike {
   // member variable 는 객체에 종속됩니다. this.speed 라고 부르게됨
   // int 멤버 변수의 디폴트 시작값은 0 입니다.
 
+  public MotorBike(int speed) {
+    this.speed = speed;
+  }
+
+  // 생성자는 클래스명과 정확하게 같아야합니다.
+  // 리턴 타입을 지정해줄 필요 없습니다.
+  // 객체지향 프로그래밍으로 객체를 만들때 해당 객체의 최초 상태를 설정할 수 있습니다.
+
   // behaviour
   void start() {
     System.out.println("부릉부릉");

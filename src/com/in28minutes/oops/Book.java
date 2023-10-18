@@ -4,6 +4,16 @@ public class Book {
 
   private int numOfCopies;
 
+  Book() {
+    System.out.println("Constructor is called");
+    this.numOfCopies = 1000;
+  }
+
+  Book(int numOfCopies) {
+    System.out.println("Constructor is called");
+    this.numOfCopies = numOfCopies;
+  }
+
   void read() {
     System.out.println("This book is cool");
   }
