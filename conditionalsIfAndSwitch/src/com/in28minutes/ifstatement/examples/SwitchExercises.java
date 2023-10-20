@@ -2,85 +2,77 @@ package com.in28minutes.ifstatement.examples;
 
 public class SwitchExercises {
 
-  public static void main(String[] args) {}
+  public static void main(String[] args) {
+    System.out.println(isWeekDay(1));
+    System.out.println(determineNameOfDay(1));
+    System.out.println(determineNameOfMonth(1));
+  }
 
+  /** return 을 하면 break 를 쓰지 않아도 됩니다.
+   * 메서드에서 return 하면 그 다음 라인에 있는 코드는 실행되지 않습니다.
+   */
   public static boolean isWeekDay(int daynumber) {
-    if (daynumber == 0 || daynumber == 6) {
-      return false;
+    switch (daynumber) {
+      case 0:
+      case 6:
+        return false;
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        return true;
     }
-    return true;
+    return false;
   }
 
   public static String determineNameOfMonth(int monthNumber) {
-    String monthName = "";
-
     switch (monthNumber) {
       case 1:
-        monthName = "January";
-        break;
+        return "January";
       case 2:
-        monthName = "February";
-        break;
+        return "February";
       case 3:
-        monthName = "March";
-        break;
+        return "March";
       case 4:
-        monthName = "April";
-        break;
+        return "April";
       case 5:
-        monthName = "May";
-        break;
+        return "May";
       case 6:
-        monthName = "June";
-        break;
+        return "June";
       case 7:
-        monthName = "July";
-        break;
+        return "July";
       case 8:
-        monthName = "August";
-        break;
+        return "August";
       case 9:
-        monthName = "September";
-        break;
+        return "September";
       case 10:
-        monthName = "October";
-        break;
+        return "October";
       case 11:
-        monthName = "November";
-        break;
+        return "November";
       case 12:
-        monthName = "December";
-        break;
+        return "December";
       default:
-        monthName = "Invalid month number";
+        return "Invalid month number";
     }
-
-    return monthName;
   }
 
   public static String determineNameOfDay(int daynumber) {
     switch (daynumber) {
       case 0:
         return "Sunday";
-        break;
       case 1:
         return "Monday";
-        break;
       case 3:
         return "Wednesday";
-        break;
       case 4:
         return "Thursday";
-        break;
       case 5:
         return "Friday";
-        break;
       case 6:
         return "Saturday";
-        break;
       default:
         return "Hey~";
-        break;
     }
   }
 }
