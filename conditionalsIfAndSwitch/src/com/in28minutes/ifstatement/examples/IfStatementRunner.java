@@ -49,13 +49,14 @@ public class IfStatementRunner {
 
   public static void puzzleFive() {
     // 이렇게 쓰지 마세영. 다음 사람이 볼 때 짱나요.
-    """
+    /** 
     int number = 5;
     if(number < 0)
     number = number + 10;
     number++;
     System.out.println(number); 
-    """;
+    ;
+    */
     int number = 5;
     if (number < 0) number = number + 10;
     number++;
