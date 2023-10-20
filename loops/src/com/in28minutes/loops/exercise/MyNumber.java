@@ -2,13 +2,15 @@ package com.in28minutes.loops.exercise;
 
 public class MyNumber {
 
-  int number;
+  private int number;
 
   public MyNumber(int number) {
     this.number = number;
   }
 
   public boolean isPrime() {
+    // 이런 조건을 Guard Check, Guard Condition 이라고 부릅니다.
+    // 메소드 전에 input 값이 올바른지 체크하는 역할 입니다.
     if (this.number <= 1) {
       return false;
     }
