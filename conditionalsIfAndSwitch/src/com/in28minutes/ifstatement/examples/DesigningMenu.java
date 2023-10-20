@@ -2,17 +2,11 @@ package com.in28minutes.ifstatement.examples;
 
 import java.util.Scanner;
 
+// 스캐너는 자바에 내재된 클래스이기에 IMPORT 해야합니다.
 public class DesigningMenu {
 
-  public enum MyEnum {
-    ADD,
-    MUTIFLY,
-    DIVIDE,
-    SUBTRACT,
-  }
-
   public static void main(String[] args) {
-    Scanner myScanner = new Scanner(System.in);
+    Scanner myScanner = new Scanner(System.in); // Systme.in 은 유저인풋, Sysyem.out 은 유저 아웃풋
 
     System.out.println("number1 을 입력하세요");
     int number1 = myScanner.nextInt();
