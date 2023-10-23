@@ -46,5 +46,12 @@ public class MyNumber {
       str += i + " ";
       System.out.println(str);
     }
+    // 선생님 답
+    // for (int i = 1; i <= this.number; i++) {
+    //   for (int j = 1; j <= i; j++) {
+    //     System.out.print(j + " ");
+    //   }
+    //   System.out.println();
+    // }
   }
 }
