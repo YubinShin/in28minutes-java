@@ -2,11 +2,13 @@ package com.in28minutes.arrays;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Student {
 
   private String name;
-  private int[] marks = {};
+  private ArrayList<Integer> marks = new ArrayList<Integer>();
 
   // Student(String name, int[] marks) {
   //   this.name = name;
@@ -16,11 +18,13 @@ public class Student {
   //  variable argument concept comes in
   Student(String name, int... marks) {
     this.name = name;
-    this.marks = marks;
+    for (int mark : marks) {
+      this.marks.add(mark);
+    }
   }
 
   public int getNumberOfmarks() {
-    return marks.length;
+    return marks.size();
   }
 
   public int getTotalSumOfMarks() {
@@ -32,33 +36,25 @@ public class Student {
   }
 
   public int getMaximumMark() {
-    int maximum = Integer.MIN_VALUE;
-    for (int mark : marks) {
-      if (maximum < mark) {
-        maximum = mark;
-      }
-    }
-    return maximum;
-    // Arrays.sort(marks);
-    // return marks[marks.length - 1];
+    return Collections.max(marks);
   }
 
   public int getMinimumMark() {
-    int minimum = Integer.MAX_VALUE;
-    for (int mark : marks) {
-      if (minimum > mark) {
-        minimum = mark;
-      }
-    }
-    return minimum;
-    // Arrays.sort(marks);
-    // return marks[0];
+    return Collections.min(marks);
   }
 
   public BigDecimal getAverageMarks() {
     BigDecimal num1 = BigDecimal.valueOf(getTotalSumOfMarks());
-    BigDecimal num2 = BigDecimal.valueOf(marks.length);
+    BigDecimal num2 = BigDecimal.valueOf(marks.size());
     return num1.divide(num2, 3, RoundingMode.UP); // 허거덩 근데 자바9 부터 Deprecated 됐다고 한다.
+  }
+
+  public void addMark(int i) {
+    marks.add(i);
+  }
+
+  public void removeMarkAtIndex(int i) {
+    marks.remove(i);
   }
 
   // 배열은 한번 생성하고 나면 크기가 처음에 정해진다. 이 크기를 변경할 수 없다.
@@ -69,13 +65,21 @@ public class Student {
   // 본 영상에서는 배열의 길이를 직접 늘이거나 줄일 수 없다는 문제에 대해 이해하는 시간을 가졌고,
   // 다음 영상에서는 ArrayList에 집중해 보겠습니다
 
-  public void addMark(int i) {
-    int[] newMarks = new int[marks.length + 1];
-    marks = newMarks;
+  public String getName() {
+    return name;
   }
 
-  public void removeMarkAtIndex(int i) {
-    int[] newMarks = new int[marks.length - 1];
-    marks = newMarks;
+  public String getMarks() {
+    return marks.toString();
   }
+  // public void addMark(int i) {
+  //   int[] newMarks = new int[marks.length + 1];
+  //   marks = newMarks;
+  // }
+
+  // public void removeMarkAtIndex(int i) {
+  //   int[] newMarks = new int[marks.length - 1];
+  //   marks = newMarks;
+  // }
+
 }
