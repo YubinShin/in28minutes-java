@@ -1,42 +1,64 @@
+package com.in28minutes.arrays;
+
 import java.math.BigDecimal;
-import java.util.Arrays;
+import java.math.RoundingMode;
 
 public class Student {
 
-  String name;
-  int[] listOfMarks = {};
+  private String name;
+  private int[] marks = {};
 
-  Student(String name, int[] listOfMarks) {
+  // Student(String name, int[] marks) {
+  //   this.name = name;
+  //   this.marks = marks;
+  // }
+
+  //  variable argument concept comes in
+  Student(String name, int... marks) {
     this.name = name;
-    this.listOfMarks = listOfMarks;
+    this.marks = marks;
   }
 
   public int getNumberOfmarks() {
-    return listOfMarks.length;
+    return marks.length;
   }
 
   public int getTotalSumOfMarks() {
     int result = 0;
-    for (int mark : listOfMarks) {
+    for (int mark : marks) {
       result += mark;
     }
     return result;
   }
 
   public int getMaximumMark() {
-    Arrays.sort(listOfMarks);
-    return listOfMarks[listOfMarks.length - 1];
+    int maximum = Integer.MIN_VALUE;
+    for (int mark : marks) {
+      if (maximum < mark) {
+        maximum = mark;
+      }
+    }
+    return maximum;
+    // Arrays.sort(marks);
+    // return marks[marks.length - 1];
   }
 
   public int getMinimumMark() {
-    Arrays.sort(listOfMarks);
-    return listOfMarks[0];
+    int minimum = Integer.MAX_VALUE;
+    for (int mark : marks) {
+      if (minimum > mark) {
+        minimum = mark;
+      }
+    }
+    return minimum;
+    // Arrays.sort(marks);
+    // return marks[0];
   }
 
   public BigDecimal getAverageMarks() {
     BigDecimal num1 = BigDecimal.valueOf(getTotalSumOfMarks());
-    BigDecimal num2 = BigDecimal.valueOf(listOfMarks.length);
-    return num1.divide(num2);
+    BigDecimal num2 = BigDecimal.valueOf(marks.length);
+    return num1.divide(num2, 3, RoundingMode.UP); // 허거덩 근데 자바9 부터 Deprecated 됐다고 한다.
   }
 
   public void addMark(int i) {}
