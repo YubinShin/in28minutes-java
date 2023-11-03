@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "loops/src",
+        "PrimitiveDataTypes/src",
+        "ArrayAndArrayList/src",
+        "ReferenceType/src"
+    ],
+    "workbench.colorTheme": "Noctis"
+}
