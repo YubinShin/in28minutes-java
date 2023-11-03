@@ -13,8 +13,9 @@ public class StudentRunner {
     int maximumMark = student.getMaximumMark();
     int minimumMark = student.getMaximumMark();
     BigDecimal average = student.getAverageMarks();
+    System.out.println(student.getName() + student.getMarks());
     student.addMark(35);
+    System.out.println(student.getName() + student.getMarks());
     student.removeMarkAtIndex(0);
-    System.out.println(student.getMarks());
   }
 }
