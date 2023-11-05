@@ -8,6 +8,7 @@ public class BookRunner {
     Book cleanCode = new Book();
 
     cleanCode.read();
-    cleanCode.setNumOfCopies(1); // 이렇게 하면 Encapsulation 이 파괴됩니다.
+    cleanCode.setNumOfCopies(1);
+    System.out.println(cleanCode.getNumOfCopies()); // 이렇게 하면 Encapsulation 이 파괴됩니다.
   }
 }
