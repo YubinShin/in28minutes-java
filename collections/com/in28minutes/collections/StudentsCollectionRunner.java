@@ -25,8 +25,9 @@ public class StudentsCollectionRunner {
 
     List<Student> studentsAl = new ArrayList<>(students);
     System.out.println(studentsAl);
-    // Collections.sort(studentsAl, new AscendingStudentComparator());
     Collections.sort(studentsAl);
+    // Collections.sort(studentsAl, new AscendingStudentComparator());
+    // 상황에 따라 다르게 정렬하고 싶으면 위 처럼 Comparator를 만들어서 쓰면 된다.
     System.out.println(studentsAl);
   }
 }
