@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ListsPuzzles",
+            "request": "launch",
+            "mainClass": "com.in28minutes.arrays.ListsPuzzles",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
+            "name": "LoopVsIterator",
+            "request": "launch",
+            "mainClass": "com.in28minutes.arrays.LoopVsIterator",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
+            "name": "Iterator",
+            "request": "launch",
+            "mainClass": "com.in28minutes.arrays.Iterator",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
+            "name": "GameRunner",
+            "request": "launch",
+            "mainClass": "com.in28minutes.oops.level2.interfaces.GameRunner",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
             "name": "StudentRunner",
             "request": "launch",
             "mainClass": "com.in28minutes.oops.level2.inheritance.StudentRunner",
