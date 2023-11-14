@@ -2,9 +2,10 @@
     "java.project.sourcePaths": [
         // "loops/src",
         // "PrimitiveDataTypes/src",
-        "ArrayAndArrayList/src"
+        // "ArrayAndArrayList/src"
         // "ReferenceType/src",
-        // "ObjectOrientedProgramming/src"
+        // "ObjectOrientedProgramming/src",
+        "collections"
     ],
     "workbench.colorTheme": "Noctis"
 }
