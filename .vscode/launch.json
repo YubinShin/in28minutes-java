@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MapRunner",
+            "request": "launch",
+            "mainClass": "com.in28minutes.collections.MapRunner",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
+            "name": "PracticeMap",
+            "request": "launch",
+            "mainClass": "com.in28minutes.collections.PracticeMap",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
             "name": "QueueRunner",
             "request": "launch",
             "mainClass": "com.in28minutes.collections.QueueRunner",
