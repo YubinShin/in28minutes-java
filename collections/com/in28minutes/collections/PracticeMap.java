@@ -15,7 +15,9 @@ public class PracticeMap {
     // getLinkedHashMap();
     // getTreeMap();
 
-    practice("This is a great thing");
+    // practice("This is a great thing");
+
+    introduceNavigableMap();
   }
 
   private static void getHashMap(Map<String, Integer> map) {
@@ -90,6 +92,25 @@ public class PracticeMap {
 
     System.out.println("charMap :" + charMap);
     System.out.println("wordsMap : " + wordsMap);
+  }
+
+  public static void introduceNavigableMap() {
+    TreeMap<String, Integer> treeMap = new TreeMap<>();
+    treeMap.put("F", 25);
+    treeMap.put("A", 15);
+    treeMap.put("Z", 5);
+    treeMap.put("L", 250);
+    treeMap.put("B", 25);
+    treeMap.put("G", 25);
+    System.out.println(treeMap);
+    System.out.println(treeMap.higherKey("B")); // 더 큰 값을 반환합니다
+    System.out.println(treeMap.ceilingKey("C")); // 같거나 더 큰 값을 반환합니다
+    System.out.println(treeMap.lowerKey("C"));
+    System.out.println(treeMap.floorKey("C"));
+    System.out.println(treeMap.firstEntry());
+    System.out.println(treeMap.lastEntry());
+    System.out.println(treeMap.subMap("C", "Y"));
+    System.out.println(treeMap.subMap("B", true, "Z", true));
   }
   /**
    * Map 의 가장 중요한 부분은

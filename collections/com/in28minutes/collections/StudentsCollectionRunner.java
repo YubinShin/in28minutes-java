@@ -25,7 +25,8 @@ public class StudentsCollectionRunner {
 
     List<Student> studentsAl = new ArrayList<>(students);
     System.out.println(studentsAl);
-    Collections.sort(studentsAl, new AscendingStudentComparator());
+    // Collections.sort(studentsAl, new AscendingStudentComparator());
+    Collections.sort(studentsAl);
     System.out.println(studentsAl);
   }
 }
