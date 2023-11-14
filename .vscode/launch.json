@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QueueRunner",
+            "request": "launch",
+            "mainClass": "com.in28minutes.collections.QueueRunner",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
+            "name": "PracticeQueue",
+            "request": "launch",
+            "mainClass": "com.in28minutes.collections.PracticeQueue",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
             "name": "PracticeSetHashSet",
             "request": "launch",
             "mainClass": "com.in28minutes.collections.PracticeSetHashSet",

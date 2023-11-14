@@ -28,5 +28,5 @@ public class Student {
 
   public String toString() {
     return String.format("id: %d, name : %s", id, name);
-  }\
+  }
 }
