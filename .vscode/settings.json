@@ -5,7 +5,8 @@
         // "ArrayAndArrayList/src"
         // "ReferenceType/src",
         // "ObjectOrientedProgramming/src",
-        "collections"
+        // "collections",
+        "Generics"
     ],
     "workbench.colorTheme": "Noctis"
 }

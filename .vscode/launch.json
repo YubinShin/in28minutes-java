@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GenericRunner",
+            "request": "launch",
+            "mainClass": "com.in28minutes.generics.GenericRunner",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
+            "name": "Tips",
+            "request": "launch",
+            "mainClass": "com.in28minutes.collections.Tips",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
+            "name": "MyStringRunner",
+            "request": "launch",
+            "mainClass": "com.in28minutes.collections.MyStringRunner",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
+            "name": "StringMagic",
+            "request": "launch",
+            "mainClass": "com.in28minutes.collections.StringMagic",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
             "name": "MapRunner",
             "request": "launch",
             "mainClass": "com.in28minutes.collections.MapRunner",
