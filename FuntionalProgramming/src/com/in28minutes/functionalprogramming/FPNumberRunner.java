@@ -42,6 +42,45 @@ public class FPNumberRunner {
     return numbers
       .stream()
       .filter(element -> element % 2 == 1)
-      .reduce(0, (number1, number2) -> number1 + number2);
+      .reduce(
+        0,
+        (number1, number2) -> {
+          System.out.printf("%d %d", number1, number2).println();
+          return number1 + number2;
+        }
+      );
   }
 }
+/**
+ *
+ * 1. 함수형 프로그래밍이란 함수에게 일등 지위를 주는겁니다
+ *   First Class Citizen 일등 시민
+ *   일등지위란 다른 함수의 매개변수로 들어갈 수 있는 지위를 말합니다.
+ *
+ * 2. 변수의 상태변이가 없습니다.
+ *
+ * 3. 어떻게 할지가 아니라 뭘 할지에 포커스를 맞춘겁니다.
+ *
+ */
+/**
+ *
+ *
+ * 함수형 프로그래밍에서 많이 쓰이는 단어
+ *
+ * 1. 람다 표현식
+ *    그저 단축표현식입니다.
+ *    장점1 : 간단한 코드면 괄호{} 없이 쓸 수 있다.
+ *
+ * 2. 스트림
+ *
+ *    스트림은 객체의 소스입니다.
+ *    문자열 스트림, 객체 스트림, 숫자 스트림 등등
+ *    스트림에는 연산이 크게 두개 있습니다.
+ *
+ *    intermediate operation : 중간 연산 filter, map, sort, distinct
+ *    > 연산결과는 다른 스트림이 된다.
+ *
+ *    terminal operation : 종단 연산 > forEach, reduce / consume(minimum, max, sum)
+ *    > 연산을 처리하고 그 연산결과를 소모(process, consume)합니다.
+ *    > 즉, 여러개의 스트림을 입력값으로 받아 하나의 결과로 줄이는 겁니다.
+ */
