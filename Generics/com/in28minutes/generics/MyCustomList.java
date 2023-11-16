@@ -20,6 +20,6 @@ public class MyCustomList<T> {
   }
 
   public T get(int index) {
-    return list[index];
+    return list.get(index);
   }
 }
