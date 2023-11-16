@@ -38,14 +38,12 @@ public class BiNumber {
    * @return LCM of the two numbers, or -1 if either number is negative, or 0 if either number is zero.
    */
   public int calculateLCM() {
-    // TODO: Write your code here
     if (number1 < 0 || number2 < 0) {
       return -1;
     }
     if (number1 == 0 || number2 == 0) {
       return 0;
     }
-
-    while(){}
+    return 0;
   }
 }

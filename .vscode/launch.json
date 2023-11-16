@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FPNumberRunner",
+            "request": "launch",
+            "mainClass": "com.in28minutes.functionalprogramming.FPNumberRunner",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
             "name": "FunctinalProgrammingRunner",
             "request": "launch",
             "mainClass": "com.in28minutes.functionalprogramming.FunctinalProgrammingRunner",

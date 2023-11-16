@@ -88,7 +88,7 @@ public class SwitchPuzzleRunner {
    */
 
   public static void puzzleFive() {
-    long l = 15;
+    // long l = 15;
     // switch(l) {
     // }
   }
@@ -99,8 +99,8 @@ public class SwitchPuzzleRunner {
    * switch 문의 case 문은 상수 또는 상수로 평가되는 표현식만 허용됩니다.
    */
   public static void puzzleSix() {
-    int number = 10;
-    int i = number * 2;
+    // int number = 10;
+    // int i = number * 2;
     // switch (number) {
     //   case number > 5:
     //     System.out.println("number>5");
