@@ -1,6 +1,7 @@
 package com.in28minutes.functionalprogramming;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Intermediate {
 
@@ -24,5 +25,29 @@ public class Intermediate {
       .distinct()
       .map(e -> e * e)
       .forEach(e -> System.out.println(e));
+
+    mapNumbers();
+    mapLowerCase();
+    mapStringLength();
+  }
+
+  public static void mapNumbers() {
+    IntStream
+      .range(1, 11)
+      .map(e -> (int) Math.pow(e, 2))
+      .forEach(e -> System.out.println(e));
+  }
+
+  public static void mapLowerCase() {
+    List<String> strings = List.of("Apple", "Ant", "Bat");
+    strings
+      .stream()
+      .map(e -> e.toLowerCase())
+      .forEach(e -> System.out.println(e));
+  }
+
+  public static void mapStringLength() {
+    List<String> strings = List.of("Apple", "Ant", "Bat");
+    strings.stream().map(e -> e.length()).forEach(e -> System.out.println(e));
   }
 }
