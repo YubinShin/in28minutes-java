@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RamdaBehindTheScreenRunner",
+            "request": "launch",
+            "mainClass": "com.in28minutes.functionalprogramming.RamdaBehindTheScreenRunner",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
             "name": "Terminal",
             "request": "launch",
             "mainClass": "com.in28minutes.functionalprogramming.Terminal",
