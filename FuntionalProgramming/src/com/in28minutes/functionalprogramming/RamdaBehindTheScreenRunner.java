@@ -66,17 +66,33 @@ class NumberSqureMapper implements Function<Integer, Integer> {
 
 public class RamdaBehindTheScreenRunner {
 
+  // 함수형 프로그래밍의 존재의의
+  // 함수를 1급 시민(함수에 매개변수로 넣을수 있음)으로 만들기 위해
+  // 1. 변수에 함수를 저장하려고
+  // 2. 메서드에 함수를 전달하려고
+  // 3. 메서드로부터 함수를 반환하려고
   public static void main(String[] args) {
     extracted();
     usePredicateAndConsumer();
   }
 
   private static void extracted() {
+    // 1 번 경우 )  변수에 함수를 저장하려고
+    Predicate<? super Integer> evenPredicate = createEvenPredicate();
+    Predicate<? super Integer> oddPredicate = createOddPredicate();
     List
       .of(23, 43, 34, 45, 36, 48)
       .stream()
-      .filter(n -> n % 2 == 0) // 필터는 클래스의 형태인 predicate를 허용한다
+      .filter(evenPredicate) // 필터는 클래스의 형태인 predicate를 허용한다
       .forEach(e -> System.out.println(e));
+  }
+
+  private static Predicate<? super Integer> createOddPredicate() {
+    return n -> n % 2 == 1; // 3번 경우)함수를 반환하고 있다
+  }
+
+  private static Predicate<? super Integer> createEvenPredicate() {
+    return n -> n % 2 == 0;
   }
 
   public static void usePredicateAndConsumer() {
