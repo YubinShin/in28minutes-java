@@ -1,4 +1,62 @@
- ## 스레드의 필요성
+```java
+
+class Task1 extends Thread {
+
+  public void run() { // SIGNATURE 정확히 적어야해용
+    System.out.println("\nTask1 Started");
+    for (int i = 101; i <= 199; i++) {
+      System.out.print(i + " ");
+    }
+    System.out.print("\nTask1 Done");
+  }
+}
+
+class Task2 implements Runnable {
+
+  @Override
+  public void run() {
+    System.out.println("\nTask2 Started");
+    for (int i = 201; i <= 299; i++) {
+      System.out.print(i + " ");
+    }
+    System.out.print("\nTask2 Done");
+  }
+}
+
+public class ThreadBasicsRunner {
+
+  public static void main(String[] args) {
+    // Task1
+    System.out.println("\nTask1 Kicked Up");
+    Task1 task1 = new Task1();
+    task1.start(); // task1.run(); // run 이라고 적으면 안되고 start 를 실행해야해요.
+
+    // Task2
+    /**
+     * runnable 인터페이스를 구현했다면 Thread라는 클래스를 또 만들어야합니다.
+     * task2 는 메인 프로그램의 실행이 완료된 후에도 실행되고 있죠?
+     */
+    System.out.println("\nTask2 Kicked Up");
+    Task2 task2 = new Task2();
+    Thread task2Thread = new Thread(task2);
+    task2Thread.start();
+
+    // Task3
+    System.out.println("\nTask3 Kicked Up");
+    for (int i = 301; i <= 399; i++) {
+      System.out.print(i + " ");
+    }
+    System.out.print("\nTask3 Done");
+
+    System.out.print("\nMain Done");
+  }
+}
+
+
+```
+
+
+## 스레드의 필요성
 Task1과 Task2, 그리고 Task3가 존재합니다
 보편적으로 다수의 시나리오에서는 Task1과 Task2, 그리고 Task3가 각각 서로에 대해 독립적으로 작용하지만 몇몇 task는 외부의 실행에 의해 의존적으로 실행되기도 합니다.
 여기서는 아마 I/O나 이와 비슷한 것들에 달려있겠죠. 
@@ -6,7 +64,11 @@ Task1과 Task2, 그리고 Task3가 존재합니다
 하지만 그런데도 CPU는 실행할 task가 단 한 가지만 존재하죠. 그럼 어떤 일이 벌어질까요? 아마 계속 기다리고 대기하는 상황이 이어질 것입니다.
 'Threads', 즉 스레드는 이렇게 유사성을 가진 모든 수행문을 동시에 실행하도록 해줍니다 이 thread를 실행하는 코드를 하나 작성하고, 또 다른 thread로 이 코드를 실행하고, 또 다른 thread로 이 코드들을 실행합니다. 그러므로 유사한 구조를 가진 이 세 가지 task가 모두 실행되는 것이죠, 이로써 CPU의 효율성이 향상되는데, 이유는 외부 서비스나 데이터 저장소로부터 데이터 입력을 기다리며 지속해서 다른 task에 대한 정보를 얻을 수 있기 때문입니다.
 
- ## 스레드의 장점
+## 스레드를 생성하는 법 2가지
+1. `extends Thread` (스레드라고 불리는 클래스를 확장하는 것)
+2. `implements Runnable`(Runnable 이라는 인터페이스를 구현하는 것)
+
+## 스레드의 장점
  세가지 작업을 스레드를 사용해 병렬로 처리하면서,
  1. 우리 CPU 는 남는 리소스 없이 최고 효율을 내며
  2. 세가지 task를 처리 중간중간 대기 시간에도 계속 다른 일을 처리하며 놀거나 비는 시간없이 지속해서 코드를 진행할 수 있어요
@@ -48,3 +110,14 @@ BLOCKED
 1) 외부서비스의 응답을 기다리고 있거나 DB가 느릴때 사용자는 차단됩니다.
 2) 다른 스레드의 진행여부에 의존하고 있을 때 (예를 들어 Task가 Task1의 완료 여부에 의존하고 있는 경우)
 
+## 스레드에 우선순위를 부여하기
+
+ task1.setPriority(1);
+
+ 스레드에 우선순위를 부여하는건 추천(request)해주는 겁니다.
+ 반영여부가 보장되는 건 아니에요.
+
+
+ `MIN_PRIORITY`  = 1;
+ `NORM_PRIORITY` = 5; //default
+ `MAX_PRIORITY` = 10;
