@@ -121,3 +121,21 @@ BLOCKED
  `MIN_PRIORITY`  = 1;
  `NORM_PRIORITY` = 5; //default
  `MAX_PRIORITY` = 10;
+
+## 스레드 간 소통
+
+Task3 는 Task1, Task2 실행이 완료되어야만 실행하고 싶어요.
+
+`task1.join();`
+
+
+```java
+    // task1이 끝나기를 기다려주기
+task1.join(); // 1) 얘가 끝나야
+task2Thread.join();
+
+// Task3
+System.out.println("\nTask3 Kicked Up"); // 2) 얘가 실행가능
+```
+
+해당 줄이 완료되어야만, 다음 라인의 코드가 실행시작 됩니다.
