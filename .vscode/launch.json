@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ExecutorServiceRunner",
+            "request": "launch",
+            "mainClass": "ExecutorServiceRunner",
+            "projectName": "java_lecture_db0f501f"
+        },
+        {
+            "type": "java",
             "name": "ThreadBasicsRunner",
             "request": "launch",
             "mainClass": "ThreadBasicsRunner",
