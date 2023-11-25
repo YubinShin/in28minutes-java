@@ -5,6 +5,7 @@ class Task1 extends Thread {
     for (int i = 101; i <= 199; i++) {
       System.out.print(i + " ");
     }
+    Thread.yield();
     System.out.print("\nTask1 Done");
   }
 }
